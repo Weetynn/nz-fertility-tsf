@@ -26,10 +26,28 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
 
     👉 A polynomial regression model, the Cubic Trend model captures non-linear trends using quadratic and cubic terms. Its ability to handle complex patterns makes it ideal for forecasting New Zealand’s fertility rates, which follow a cubic trajectory.
 
+#### 🔶 Split the data into training (70%) and testing (30%) sets, calculate forecasts using the selected methods, and optimize parameters if necessary. Compare observed and forecast values.
+
+      Simple Exponential Smoothing model
+  
+  ![Screenshot 2024-10-22 001904](https://github.com/user-attachments/assets/6a0d39d8-dce2-45ef-bdb3-6037d07924cb)
+  
+      Holt's Linear Trend model
+
+  ![Screenshot 2024-10-22 001916](https://github.com/user-attachments/assets/c092b5d7-93d1-4eb3-ba04-ae67034abc95)
+
+      Cubic Trend model
+  
+  ![Screenshot 2024-10-22 001925](https://github.com/user-attachments/assets/443187c4-eb9f-4079-85bd-ed94a77ae80d)
+
+
+
+
+
 
   
 
-- Split the data into training (70%) and testing (30%) sets, calculate forecasts using the selected methods, and optimize parameters if necessary. Compare observed and forecast values.
+
 Identify two measures of forecast errors, evaluate the statistics for each method, and justify the most appropriate forecasting method.
 Conduct autocorrelation analysis and check for stationarity. If not stationary, transform the series and support with statistical tests.
 Develop two ARIMA or SARIMA models based on the analysis and describe the behavior of ACF and PACF plots. Provide summaries, model equations, and assess model adequacy.
