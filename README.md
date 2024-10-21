@@ -40,16 +40,23 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
   
   ![Screenshot 2024-10-22 001925](https://github.com/user-attachments/assets/443187c4-eb9f-4079-85bd-ed94a77ae80d)
 
+#### 🔶 Identify two measures of forecast errors, evaluate the statistics for each method, and justify the most appropriate forecasting method.
+
+      The two prediction error measures used are Mean Absolute Error (MAE) and Root Mean Square Error (RMSE):
+
+      👉 MAE:MAE averages absolute errors, making it easy for non-technical stakeholders to understand. It treats all errors equally, which is important when every forecasting error could have a significant impact, ensuring no error is over- or under-emphasized.
+
+      👉 RMSE: RMSE is more sensitive to larger errors by squaring them, which is crucial when forecasting critical variables like fertility rates. It helps identify big mistakes that can lead to planning issues in sectors like healthcare and education.
+
+      👉 Combining Both: MAE gives a straightforward view of overall model accuracy, while RMSE highlights large errors. Together, they provide a complete picture of model performance, balancing average accuracy with the severity of outliers.
+
+
+      📌 The Cubic Trend model was found to be the most suitable, with the lowest RMSE (0.1767227) and MAE (0.1405531) values.
+      
+- Conduct autocorrelation analysis and check for stationarity. If not stationary, transform the series and support with statistical tests.
 
 
 
-
-
-  
-
-
-Identify two measures of forecast errors, evaluate the statistics for each method, and justify the most appropriate forecasting method.
-Conduct autocorrelation analysis and check for stationarity. If not stationary, transform the series and support with statistical tests.
 Develop two ARIMA or SARIMA models based on the analysis and describe the behavior of ACF and PACF plots. Provide summaries, model equations, and assess model adequacy.
 Test the significance of model parameters at a 0.05 level and justify the results.
 Calculate forecast errors for the developed ARIMA or SARIMA models.
