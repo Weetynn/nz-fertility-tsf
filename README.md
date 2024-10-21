@@ -119,8 +119,23 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
     
     📌 This suggests that the residuals behave as white noise, further supporting the adequacy of both models.
 
-- Test the significance of model parameters at a 0.05 level and justify the results.
+#### 🔶 Test the significance of model parameters at a 0.05 level and justify the results.
 
-- 
+    To assess the significance of the coefficient parameters in both models, the coeftest() function from the "lmtest" package was used.
+    
+    
+    ARIMA(1,2,1) Model:
+    
+    👉 AR1 Component: The null hypothesis suggests the AR1 component equals zero. With a p-value of 0.2944 (above 0.05), the null hypothesis cannot be rejected, indicating insufficient evidence to conclude that the AR1 component plays a significant role.
+    
+    👉 MA1 Component: The null hypothesis is that the MA1 component equals zero. With a p-value of 9.465e-14 (below 0.05), the null hypothesis is rejected, confirming that the MA1 component is significant at the 5% level.
+    
+    
+    ARIMA(0,2,1) Model:
+    
+    👉 MA1 Component:
+    The null hypothesis suggests the MA1 component equals zero. With a p-value of 3.049e-07 (below 0.05), the null hypothesis is rejected, confirming that the MA1 component is significant at the 5% significance threshold. 
+
+
 Calculate forecast errors for the developed ARIMA or SARIMA models.
 Use the most appropriate ARIMA or SARIMA model to forecast fertility rates for the next 10 years.
