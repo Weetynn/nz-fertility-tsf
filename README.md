@@ -103,11 +103,12 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
 
                                             Model Equation for the ARIMA (1,2,1) model
 
-![Screenshot 2024-10-22 013013](https://github.com/user-attachments/assets/ef47849c-ea0c-420a-a07c-76a0adf3a206)
+![Screenshot 2024-10-22 020606](https://github.com/user-attachments/assets/1d24873d-d6aa-47cb-94ab-389ea0845e68)
+
 
                                             Model Equation  for the ARIMA(0,2,1) model
                                             
-![Screenshot 2024-10-22 013133](https://github.com/user-attachments/assets/028e4f4b-822f-4dff-aecb-0c77e21ab18a)
+![Screenshot 2024-10-22 020612](https://github.com/user-attachments/assets/00850171-3a8b-41cf-b257-ae2ce3bfcc57)
 
     To assess the adequacy of both models, the checkresiduals() function was used, focusing on two aspects: the Ljung-Box test and the ACF plot of the residuals.
 
