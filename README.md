@@ -28,15 +28,15 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
 
 #### 🔶 Split the data into training (70%) and testing (30%) sets, calculate forecasts using the selected methods, and optimize parameters if necessary. Compare observed and forecast values.
 
-      Simple Exponential Smoothing model
+                                                  Simple Exponential Smoothing model
   
   ![Screenshot 2024-10-22 001904](https://github.com/user-attachments/assets/6a0d39d8-dce2-45ef-bdb3-6037d07924cb)
   
-      Holt's Linear Trend model
+                                                      Holt's Linear Trend model
 
   ![Screenshot 2024-10-22 001916](https://github.com/user-attachments/assets/c092b5d7-93d1-4eb3-ba04-ae67034abc95)
 
-      Cubic Trend model
+                                                            Cubic Trend model
   
   ![Screenshot 2024-10-22 001925](https://github.com/user-attachments/assets/443187c4-eb9f-4079-85bd-ed94a77ae80d)
 
@@ -72,16 +72,33 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
 
 
     Based on these results, the ndiffs() function recommended second-order differencing to achieve stationarity. First-order differencing was performed, but the time series remained non-stationary (p-values: 0.107 for Unit Root and 0.03287 for KPSS), requiring second-order differencing. After applying it, the series became stationary and trend stationary, as confirmed by p-values of 0.01 (Unit Root) and 0.1 (KPSS). 
+
     
     📌 Thus, second-order differencing was necessary to make the New Zealand fertility rate series stationary.
 
-#### 🔶 Develop two ARIMA or SARIMA models based on the analysis and describe the behavior of ACF and PACF plots. Provide summaries, model equations, and assess model adequacy.
+#### 🔶 Develop two ARIMA or SARIMA models based on the analysis and describe the behavior of ACF and PACF plots. 
 
   ![Screenshot 2024-10-22 010752](https://github.com/user-attachments/assets/b03c337e-f42d-4568-83fd-8bcd2cfabfe0)
 
     The ACF and PACF plots after applying second-order differencing show an exponential decay pattern. While there is a drop after the first lag in both plots, it is not drastic, and the subsequent lags don't hover near zero, confirming an exponential pattern. Based on these findings, the Box-Jenkins Methodology suggests an ARIMA(1,2,1) model.
 
-    To explore further, the auto.arima() function was used, identifying ARIMA(0,2,1) as the best model, with the lowest AICc value of -128.1283. The second-best model, ARIMA(1,2,1), had an AICc value of -126.8624, aligning with the earlier Box-Jenkins suggestion. Therefore, the two recommended models are ARIMA(1,2,1) and ARIMA(0,2,1).
+    To explore further, the auto.arima() function was used, identifying ARIMA(0,2,1) as the best model, with the lowest AICc value of -128.1283. The second-best model, ARIMA(1,2,1), had an AICc value of -126.8624, aligning with the earlier Box-Jenkins suggestion. 
+    
+    
+    📌 Therefore, the two recommended models are ARIMA(1,2,1) and ARIMA(0,2,1).
+
+#### 🔶 Provide summaries, model equations, and assess model adequacy of the two models developed.
+
+                                            Output summary for the ARIMA (1,2,1) model
+  
+  ![Screenshot 2024-10-22 011218](https://github.com/user-attachments/assets/9747e2b1-4248-4e23-99ce-d40e58dda185)
+
+                                                Output summary for the ARIMA(0,2,1) model
+  
+  ![Screenshot 2024-10-22 011226](https://github.com/user-attachments/assets/0f8693be-ad51-4fab-bbe4-88c32f0e68c3)
+
+
+
 
 
 
