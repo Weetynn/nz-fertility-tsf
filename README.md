@@ -98,6 +98,16 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
   ![Screenshot 2024-10-22 011226](https://github.com/user-attachments/assets/0f8693be-ad51-4fab-bbe4-88c32f0e68c3)
 
 
+                                            Model Equation for the ARIMA (1,2,1) model
+
+![Screenshot 2024-10-22 013013](https://github.com/user-attachments/assets/ef47849c-ea0c-420a-a07c-76a0adf3a206)
+
+                                            Model Equation  for the ARIMA(0,2,1) model
+                                            
+![Screenshot 2024-10-22 013133](https://github.com/user-attachments/assets/028e4f4b-822f-4dff-aecb-0c77e21ab18a)
+
+
+
 
 
 
