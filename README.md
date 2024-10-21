@@ -42,22 +42,44 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
 
 #### 🔶 Identify two measures of forecast errors, evaluate the statistics for each method, and justify the most appropriate forecasting method.
 
-      The two prediction error measures used are Mean Absolute Error (MAE) and Root Mean Square Error (RMSE):
+    The two prediction error measures used are Mean Absolute Error (MAE) and Root Mean Square Error (RMSE):
 
-      👉 MAE:MAE averages absolute errors, making it easy for non-technical stakeholders to understand. It treats all errors equally, which is important when every forecasting error could have a significant impact, ensuring no error is over- or under-emphasized.
+    👉 MAE:MAE averages absolute errors, making it easy for non-technical stakeholders to understand. It treats all errors equally, which is important when every forecasting error could have a significant impact, ensuring no error is over- or under-emphasized.
 
-      👉 RMSE: RMSE is more sensitive to larger errors by squaring them, which is crucial when forecasting critical variables like fertility rates. It helps identify big mistakes that can lead to planning issues in sectors like healthcare and education.
+    👉 RMSE: RMSE is more sensitive to larger errors by squaring them, which is crucial when forecasting critical variables like fertility rates. It helps identify big mistakes that can lead to planning issues in sectors like healthcare and education.
 
-      👉 Combining Both: MAE gives a straightforward view of overall model accuracy, while RMSE highlights large errors. Together, they provide a complete picture of model performance, balancing average accuracy with the severity of outliers.
+    👉 Combining Both: MAE gives a straightforward view of overall model accuracy, while RMSE highlights large errors. Together, they provide a complete picture of model performance, balancing average accuracy with the severity of outliers.
 
 
-      📌 The Cubic Trend model was found to be the most suitable, with the lowest RMSE (0.1767227) and MAE (0.1405531) values.
+    📌 The Cubic Trend model was found to be the most suitable, with the lowest RMSE (0.1767227) and MAE (0.1405531) values.
       
-- Conduct autocorrelation analysis and check for stationarity. If not stationary, transform the series and support with statistical tests.
+#### 🔶 Conduct autocorrelation analysis and check for stationarity. If not stationary, transform the series and support with statistical tests.
+
+  ![Screenshot 2024-10-22 003711](https://github.com/user-attachments/assets/091fba6b-4a20-4992-a339-e8165807b1f0)
+  
+  ![Screenshot 2024-10-22 003718](https://github.com/user-attachments/assets/1966d2ce-90ad-40af-8c43-36b90302124a)
+
+    The ACF plot shows a slow decline, indicating a non-stationary time series, likely due to a trend. 
+
+    The PACF plot reveals a significant drop after the first lag, suggesting an autoregressive component of order 1 (AR(1)). This implies that an AR(1) model may be appropriate for capturing dependencies.
 
 
+    To confirm, the Unit Root and KPSS tests were performed:
+
+    👉 Unit Root Test: The p-value (0.1401) exceeds 0.05, meaning the null hypothesis is not rejected, and there is insufficient evidence to claim the series is stationary.
+
+    👉 KPSS Test (Trend Stationarity): The p-value (0.01) is below 0.05, leading to the rejection of the null hypothesis, indicating that the series is not trend stationary.
+
+
+    Based on these results, the ndiffs() function recommended second-order differencing to achieve stationarity. First-order differencing was performed, but the time series remained non-stationary (p-values: 0.107 for Unit Root and 0.03287 for KPSS), requiring second-order differencing. After applying it, the series became stationary and trend stationary, as confirmed by p-values of 0.01 (Unit Root) and 0.1 (KPSS). 
+    
+    📌 Thus, second-order differencing was necessary to make the New Zealand fertility rate series stationary.
 
 Develop two ARIMA or SARIMA models based on the analysis and describe the behavior of ACF and PACF plots. Provide summaries, model equations, and assess model adequacy.
+
+
+
+
 Test the significance of model parameters at a 0.05 level and justify the results.
 Calculate forecast errors for the developed ARIMA or SARIMA models.
 Use the most appropriate ARIMA or SARIMA model to forecast fertility rates for the next 10 years.
