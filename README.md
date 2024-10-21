@@ -119,22 +119,8 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
     
     📌 This suggests that the residuals behave as white noise, further supporting the adequacy of both models.
 
+- Test the significance of model parameters at a 0.05 level and justify the results.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Test the significance of model parameters at a 0.05 level and justify the results.
+- 
 Calculate forecast errors for the developed ARIMA or SARIMA models.
 Use the most appropriate ARIMA or SARIMA model to forecast fertility rates for the next 10 years.
