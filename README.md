@@ -16,7 +16,16 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
 
     The Mann-Kendall Trend test confirms the trend component, rejecting the null hypothesis with a p-value of 3.4338e-12, proving a significant trend at the 5% level.
 
-- Choose three forecasting methods and provide detailed descriptions with reasons for your selection.
+#### 🔶 Choose three forecasting methods and provide detailed descriptions with reasons for your selection.
+
+    The three forecasting methods chosen are Simple Exponential Smoothing (SES), Holt’s Linear Trend model, and the Cubic Trend model.
+
+    👉 SES smooths the data and is best for series without significant trends or seasonality. Although the data has a trend, SES was chosen for its simplicity as a baseline to compare against more complex models.
+
+    👉 Holt’s Linear Trend model builds on SES by incorporating both level and trend components, making it suitable for data with trends. Given the trend in the fertility data, Holt’s model was chosen to handle both level and trend adjustments in the forecast.
+
+    👉 A polynomial regression model, the Cubic Trend model captures non-linear trends using quadratic and cubic terms. Its ability to handle complex patterns makes it ideal for forecasting New Zealand’s fertility rates, which follow a cubic trajectory.
+
 
   
 
