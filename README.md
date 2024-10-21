@@ -78,7 +78,9 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
 
 #### 🔶 Develop two ARIMA or SARIMA models based on the analysis and describe the behavior of ACF and PACF plots. 
 
-  ![Screenshot 2024-10-22 010752](https://github.com/user-attachments/assets/b03c337e-f42d-4568-83fd-8bcd2cfabfe0)
+  ![Screenshot 2024-10-22 015826](https://github.com/user-attachments/assets/909dd5b8-fb86-4994-b365-b4a1be6fe391)
+  
+  ![Screenshot 2024-10-22 015835](https://github.com/user-attachments/assets/5b8a9ac5-6106-4350-934b-fb3c5bafc187)
 
     The ACF and PACF plots after applying second-order differencing show an exponential decay pattern. While there is a drop after the first lag in both plots, it is not drastic, and the subsequent lags don't hover near zero, confirming an exponential pattern. Based on these findings, the Box-Jenkins Methodology suggests an ARIMA(1,2,1) model.
 
@@ -91,11 +93,12 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
 
                                             Output summary for the ARIMA (1,2,1) model
   
-  ![Screenshot 2024-10-22 011218](https://github.com/user-attachments/assets/9747e2b1-4248-4e23-99ce-d40e58dda185)
+  ![Screenshot 2024-10-22 020014](https://github.com/user-attachments/assets/12d57c45-f46c-46d1-b560-f7fc20c0e777)
+
 
                                                 Output summary for the ARIMA(0,2,1) model
   
-  ![Screenshot 2024-10-22 011226](https://github.com/user-attachments/assets/0f8693be-ad51-4fab-bbe4-88c32f0e68c3)
+  ![Screenshot 2024-10-22 020006](https://github.com/user-attachments/assets/861db331-ddf8-42cd-89c1-d5c9bf52cd79)
 
 
                                             Model Equation for the ARIMA (1,2,1) model
@@ -109,13 +112,11 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
     To assess the adequacy of both models, the checkresiduals() function was used, focusing on two aspects: the Ljung-Box test and the ACF plot of the residuals.
 
     👉 Ljung-Box Test: The null hypothesis states that the residuals are random, indicating an adequate model. With p-values of 0.3139 for ARIMA(1,2,1) and 0.09844 for ARIMA(0,2,1), both are above 0.05, meaning the null hypothesis is not rejected.
-    
-    
+  
     📌 Therefore, there is no evidence to suggest that either model is inadequate at the 5% significance level.
     
 
     👉 ACF Plot of Residuals: Both models’ ACF plots show that all autocorrelations are within the confidence bounds, and no bars exceed the significance thresholds, indicating no significant autocorrelation. 
-    
     
     📌 This suggests that the residuals behave as white noise, further supporting the adequacy of both models.
 
@@ -133,9 +134,21 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
     
     ARIMA(0,2,1) Model:
     
-    👉 MA1 Component:
-    The null hypothesis suggests the MA1 component equals zero. With a p-value of 3.049e-07 (below 0.05), the null hypothesis is rejected, confirming that the MA1 component is significant at the 5% significance threshold. 
+    👉 MA1 Component: The null hypothesis suggests the MA1 component equals zero. With a p-value of 3.049e-07 (below 0.05), the null hypothesis is rejected, confirming that the MA1 component is significant at the 5% significance threshold. 
+
+#### 🔶 Calculate forecast errors for the developed ARIMA or SARIMA models.
+
+    The MAE and RMSE values for the ARIMA(1,2,1) model are 0.06422504 and 0.07779877, while for the ARIMA(0,2,1) model, the values are 0.06404357 and 0.0785315. Although ARIMA(1,2,1) has a slightly lower RMSE, ARIMA(0,2,1) shows a lower MAE, suggesting better performance in reducing average errors. The small difference in RMSE does not justify the added complexity of the autoregressive term in ARIMA(1,2,1).
+    
+    Following the principle of parsimony, which favors simpler models with fewer assumptions when performance is comparable, ARIMA(0,2,1) is preferred. Its slightly better MAE indicates a more consistent reduction in errors, making it a more practical and robust choice for forecasting, with a lower risk of overfitting. 
+    
+    
+    📌 Therefore, ARIMA(0,2,1) is the most suitable model.
+
+#### 🔶 Use the most appropriate ARIMA or SARIMA model to forecast fertility rates for the next 10 years.
+
+    Given that the ARIMA(0,2,1) model was identified as the most suitable model, forecast of New Zealand’s fertility rate in the next 10 years is thereby performed using the said model. 
+  
+![Screenshot 2024-10-22 015652](https://github.com/user-attachments/assets/f600dcd8-4f21-4eda-ac4f-d50b5de7775d)
 
 
-Calculate forecast errors for the developed ARIMA or SARIMA models.
-Use the most appropriate ARIMA or SARIMA model to forecast fertility rates for the next 10 years.
