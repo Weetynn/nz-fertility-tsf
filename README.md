@@ -106,8 +106,18 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
                                             
 ![Screenshot 2024-10-22 013133](https://github.com/user-attachments/assets/028e4f4b-822f-4dff-aecb-0c77e21ab18a)
 
+    To assess the adequacy of both models, the checkresiduals() function was used, focusing on two aspects: the Ljung-Box test and the ACF plot of the residuals.
 
+    👉 Ljung-Box Test: The null hypothesis states that the residuals are random, indicating an adequate model. With p-values of 0.3139 for ARIMA(1,2,1) and 0.09844 for ARIMA(0,2,1), both are above 0.05, meaning the null hypothesis is not rejected.
+    
+    
+    📌 Therefore, there is no evidence to suggest that either model is inadequate at the 5% significance level.
+    
 
+    👉 ACF Plot of Residuals: Both models’ ACF plots show that all autocorrelations are within the confidence bounds, and no bars exceed the significance thresholds, indicating no significant autocorrelation. 
+    
+    
+    📌 This suggests that the residuals behave as white noise, further supporting the adequacy of both models.
 
 
 
