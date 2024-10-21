@@ -75,7 +75,25 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
     
     📌 Thus, second-order differencing was necessary to make the New Zealand fertility rate series stationary.
 
-Develop two ARIMA or SARIMA models based on the analysis and describe the behavior of ACF and PACF plots. Provide summaries, model equations, and assess model adequacy.
+#### 🔶 Develop two ARIMA or SARIMA models based on the analysis and describe the behavior of ACF and PACF plots. Provide summaries, model equations, and assess model adequacy.
+
+  ![Screenshot 2024-10-22 010752](https://github.com/user-attachments/assets/b03c337e-f42d-4568-83fd-8bcd2cfabfe0)
+
+    The ACF and PACF plots after applying second-order differencing show an exponential decay pattern. While there is a drop after the first lag in both plots, it is not drastic, and the subsequent lags don't hover near zero, confirming an exponential pattern. Based on these findings, the Box-Jenkins Methodology suggests an ARIMA(1,2,1) model.
+
+    To explore further, the auto.arima() function was used, identifying ARIMA(0,2,1) as the best model, with the lowest AICc value of -128.1283. The second-best model, ARIMA(1,2,1), had an AICc value of -126.8624, aligning with the earlier Box-Jenkins suggestion. Therefore, the two recommended models are ARIMA(1,2,1) and ARIMA(0,2,1).
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
