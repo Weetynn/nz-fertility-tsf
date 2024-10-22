@@ -44,7 +44,7 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
 
     The two prediction error measures used are Mean Absolute Error (MAE) and Root Mean Square Error (RMSE):
 
-    👉 MAE:MAE averages absolute errors, making it easy for non-technical stakeholders to understand. It treats all errors equally, which is important when every forecasting error could have a significant impact, ensuring no error is over- or under-emphasized.
+    👉 MAE: MAE averages absolute errors, making it easy for non-technical stakeholders to understand. It treats all errors equally, which is important when every forecasting error could have a significant impact, ensuring no error is over- or under-emphasized.
 
     👉 RMSE: RMSE is more sensitive to larger errors by squaring them, which is crucial when forecasting critical variables like fertility rates. It helps identify big mistakes that can lead to planning issues in sectors like healthcare and education.
 
