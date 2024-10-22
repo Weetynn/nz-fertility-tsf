@@ -10,7 +10,7 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
 
   ![Screenshot 2024-10-22 000027](https://github.com/user-attachments/assets/7d4d24d3-63a2-41f9-b171-0783758b8916)
 
-    The g series plot shows a clear decline in the number of children born per woman in New Zealand from 1960 to 2021. Initially high in the 1960s, the rate drops sharply in earlier decades, then stabilizes to a lower, more variable pattern after the 1980s.
+    The time series plot shows a clear decline in the number of children born per woman in New Zealand from 1960 to 2021. Initially high in the 1960s, the rate drops sharply in earlier decades, then stabilizes to a lower, more variable pattern after the 1980s.
 
     The dominant feature is the long-term decreasing trend, with no evidence of cyclical patterns or seasonality due to the annual data frequency.
 
@@ -28,15 +28,15 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
 
 #### 🔶 Split the data into training (70%) and testing (30%) sets, calculate forecasts using the selected methods, and optimize parameters if necessary. Compare observed and forecast values.
 
-                                                  Simple Exponential Smoothing model
+                                                Simple Exponential Smoothing Model
   
   ![Screenshot 2024-10-22 001904](https://github.com/user-attachments/assets/6a0d39d8-dce2-45ef-bdb3-6037d07924cb)
   
-                                                      Holt's Linear Trend model
+                                                      Holt's Linear Trend Model
 
   ![Screenshot 2024-10-22 001916](https://github.com/user-attachments/assets/c092b5d7-93d1-4eb3-ba04-ae67034abc95)
 
-                                                            Cubic Trend model
+                                                          Cubic Trend Model
   
   ![Screenshot 2024-10-22 001925](https://github.com/user-attachments/assets/443187c4-eb9f-4079-85bd-ed94a77ae80d)
 
@@ -51,7 +51,7 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
     👉 Combining Both: MAE gives a straightforward view of overall model accuracy, while RMSE highlights large errors. Together, they provide a complete picture of model performance, balancing average accuracy with the severity of outliers.
 
 
-    📌 The Cubic Trend model was found to be the most suitable, with the lowest RMSE (0.1767227) and MAE (0.1405531) values.
+    ∴ The Cubic Trend model was found to be the most suitable, with the lowest RMSE (0.1767227) and MAE (0.1405531) values.
       
 #### 🔶 Conduct autocorrelation analysis and check for stationarity. If not stationary, transform the series and support with statistical tests.
 
@@ -74,7 +74,7 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
     Based on these results, the ndiffs() function recommended second-order differencing to achieve stationarity. First-order differencing was performed, but the time series remained non-stationary (p-values: 0.107 for Unit Root and 0.03287 for KPSS), requiring second-order differencing. After applying it, the series became stationary and trend stationary, as confirmed by p-values of 0.01 (Unit Root) and 0.1 (KPSS). 
 
     
-    📌 Thus, second-order differencing was necessary to make the New Zealand fertility rate series stationary.
+    ∴ Second-order differencing was necessary to make the New Zealand fertility rate series stationary.
 
 #### 🔶 Develop two ARIMA or SARIMA models based on the analysis and describe the behavior of ACF and PACF plots. 
 
@@ -87,7 +87,7 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
     To explore further, the auto.arima() function was used, identifying ARIMA(0,2,1) as the best model, with the lowest AICc value of -128.1283. The second-best model, ARIMA(1,2,1), had an AICc value of -126.8624, aligning with the earlier Box-Jenkins suggestion. 
     
     
-    📌 Therefore, the two recommended models are ARIMA(1,2,1) and ARIMA(0,2,1).
+    ∴ The two recommended models are ARIMA(1,2,1) and ARIMA(0,2,1).
 
 #### 🔶 Provide summaries, model equations, and assess model adequacy of the two models developed.
 
@@ -114,12 +114,12 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
 
     👉 Ljung-Box Test: The null hypothesis states that the residuals are random, indicating an adequate model. With p-values of 0.3139 for ARIMA(1,2,1) and 0.09844 for ARIMA(0,2,1), both are above 0.05, meaning the null hypothesis is not rejected.
   
-    📌 Therefore, there is no evidence to suggest that either model is inadequate at the 5% significance level.
+    ∴ There is no evidence to suggest that either model is inadequate at the 5% significance level.
     
 
     👉 ACF Plot of Residuals: Both models’ ACF plots show that all autocorrelations are within the confidence bounds, and no bars exceed the significance thresholds, indicating no significant autocorrelation. 
     
-    📌 This suggests that the residuals behave as white noise, further supporting the adequacy of both models.
+    ∴ This suggests that the residuals behave as white noise, further supporting the adequacy of both models.
 
 #### 🔶 Test the significance of model parameters at a 0.05 level and justify the results.
 
@@ -144,7 +144,7 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
     Following the principle of parsimony, which favors simpler models with fewer assumptions when performance is comparable, ARIMA(0,2,1) is preferred. Its slightly better MAE indicates a more consistent reduction in errors, making it a more practical and robust choice for forecasting, with a lower risk of overfitting. 
     
     
-    📌 Therefore, ARIMA(0,2,1) is the most suitable model.
+    ∴ ARIMA(0,2,1) is the most suitable model.
 
 #### 🔶 Use the most appropriate ARIMA or SARIMA model to forecast fertility rates for the next 10 years.
 
