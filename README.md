@@ -4,7 +4,7 @@
 
 Fertility rates in New Zealand have experienced significant changes from 1960 to 2021, reflecting broader social and economic shifts. Using data from The World Bank, this project examines the total fertility rate, which represents the average number of children a woman would have during her reproductive years based on age-specific fertility rates of a given year. To forecast future fertility patterns, several time series forecasting methods are applied, with all analyses conducted using the R programming language. 
 
-## 🗒️ Project Tasks and their Respective Deliverables 
+## 🗒️ Task Overview
 
 #### 🔶 Construct a time series plot for the chosen fertility rate data and comment on the pattern, identifying its components using statistical tests.
 
