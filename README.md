@@ -30,7 +30,7 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
 
 <div align="center">
 
-    Simple Exponential Smoothing Model
+      Simple Exponential Smoothing Model
 
 </div>
   
@@ -39,18 +39,18 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
   
 <div align="center">
   
-    Holt's Linear Trend Model
+      Holt's Linear Trend Model
 
 </div>
 
   ![Screenshot 2024-10-22 001916](https://github.com/user-attachments/assets/c092b5d7-93d1-4eb3-ba04-ae67034abc95)
   
 
-  <div align="center">
+<div align="center">
 
-    Cubic Trend Model
+      Cubic Trend Model
 
-  </div>
+</div>
   
   ![Screenshot 2024-10-22 001925](https://github.com/user-attachments/assets/443187c4-eb9f-4079-85bd-ed94a77ae80d)
 
