@@ -91,22 +91,22 @@ Fertility rates in New Zealand have experienced significant changes from 1960 to
 
 #### 🔶 Provide summaries, model equations, and assess model adequacy of the two models developed.
 
-                                            Output summary for the ARIMA (1,2,1) model
+                                          Output summary for the ARIMA (1,2,1) model
   
   ![Screenshot 2024-10-22 020014](https://github.com/user-attachments/assets/12d57c45-f46c-46d1-b560-f7fc20c0e777)
 
 
-                                                Output summary for the ARIMA(0,2,1) model
+                                              Output summary for the ARIMA(0,2,1) model
   
   ![Screenshot 2024-10-22 020006](https://github.com/user-attachments/assets/861db331-ddf8-42cd-89c1-d5c9bf52cd79)
 
 
-                                            Model Equation for the ARIMA (1,2,1) model
+                                          Model Equation for the ARIMA (1,2,1) model
 
 ![Screenshot 2024-10-22 104823](https://github.com/user-attachments/assets/09b2b060-62b2-4583-b050-4c8b164bb5e6)
 
 
-                                            Model Equation  for the ARIMA(0,2,1) model
+                                          Model Equation  for the ARIMA(0,2,1) model
                                             
 ![Screenshot 2024-10-22 104830](https://github.com/user-attachments/assets/9cffd407-65b1-48fe-aafb-ef897065a665)
 
